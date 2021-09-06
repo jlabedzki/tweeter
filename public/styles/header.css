@@ -1,0 +1,11 @@
+#header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url('/images/crissxcross.png');
+  background-color: rgb(225, 167, 60);
+  position: absolute;
+  width: 100vw;
+  height: 520px;
+}
