@@ -9,7 +9,8 @@ nav {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
+  position: fixed;
+  top: 0;
   z-index: 1;
   box-shadow: 0 4px 7px -1px rgb(70, 70, 70);
 }
