@@ -22,7 +22,7 @@ form {
   width: 100%;
 }
 
-input {
+textarea {
   margin: .5em;
   width: 100%;
   font-weight: bold;
@@ -30,10 +30,11 @@ input {
   border: none;
   border-bottom: 5px solid rgb(101, 101, 101);
   background-color: transparent;
-  padding-bottom: .3em;
+  padding-bottom: .1em;
+  resize: none;
 }
 
-input:focus {
+textarea:focus {
   outline: none;
 }
 
