@@ -3,10 +3,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color:rgb(230, 230, 230);
   width: 100%;
-  margin-top: 1em;
-  box-shadow: 3px 5px 7px -1px rgb(70, 70, 70);
+  margin-top: 30px;
 }
 
 .new-tweet:hover {
@@ -29,7 +27,7 @@ textarea {
   font-weight: bold;
   color: rgb(100, 100, 100);
   border: none;
-  border-bottom: 5px solid rgb(101, 101, 101);
+  border-bottom: 4px solid rgb(101, 101, 101);
   background-color: transparent;
   padding-bottom: .1em;
   resize: none;
