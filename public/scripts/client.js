@@ -1,43 +1,3 @@
-const tweetData = {
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
-    "handle": "@SirIsaac"
-  },
-  "content": {
-    "text": "If I have seen further it is by standing on the shoulders of giants, yo."
-  },
-  "created_at": 1461116232227
-}
-
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
-
-
-
 const createTweetElement = function (tweetData) {
   const tweet = `
     <article class="tweet">
@@ -64,11 +24,41 @@ const createTweetElement = function (tweetData) {
 
 const renderTweets = (tweets) => {
   for (const tweet of tweets) {
-    const newTweet = createTweetElement(tweet);
-    $('.tweet-container').append(newTweet);
+    $('.tweet-container').prepend(createTweetElement(tweet));
   }
 };
 
 $(document).ready(() => {
-  renderTweets(data);
+  $('.new-tweet form').on('submit', function (e) {
+    $(this).children('.errorContainer').empty();
+
+    const data = $(this).serialize();
+    const input = data
+      .split('=')
+      .slice(1)
+      .join('')
+      .split('%20')
+      .join(' ');
+
+    e.preventDefault();
+
+    if (input && input.length <= 140) {
+      $.post('/tweets', data);
+    }
+    if (input.length > 140) {
+      $(this).children('.errorContainer').append(`<p class="error">Too many characters!</p>`);
+    }
+    if (!input) {
+      $(this).children('.errorContainer').append(`<p class="error">Enter some text!</p>`);
+    }
+  });
+
+  const loadTweets = () => {
+    $.get('/tweets', res => {
+      renderTweets(res);
+    });
+  }
+
+  loadTweets();
+
 });
