@@ -1,10 +1,11 @@
+@use 'header' as h;
+
+
 #backToTop {
   position: fixed;
   bottom: 15px;
   right: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include h.verticalAlign;
   min-height: 4rem;
   min-width: 4rem;
   height: 6vw;

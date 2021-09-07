@@ -1,3 +1,5 @@
+@use 'navbar' as n;
+
 .new-tweet {
   display: flex;
   flex-direction: column;
@@ -61,12 +63,12 @@ textarea:focus {
 
 .counter,
 button {
-  font-family: 'Bungee', sans-serif;
+  font-family: n.$logoFont;
 }
 
 #submitTweet {
   border: none;
-  background-color: #4056A1;
+  background-color: n.$navColor;
   color: white;
   padding: .5rem;
   width: 7rem;

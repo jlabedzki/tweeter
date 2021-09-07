@@ -11,58 +11,49 @@ nav {
   padding-left: 1.5em;
   padding-right: 1.5em;
 }
-
-.nav-items-container {
+nav .seeThrough {
+  background-color: none;
+}
+nav .blue {
+  background-color: #4056A1;
+  box-shadow: 0 3px 7px -1px #464646;
+}
+nav .nav-items-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: inherit;
 }
-
-.seeThrough {
-  background-color: none;
-}
-
-.blue {
-  background-color: #4056A1;
-  box-shadow: 0 3px 7px -1px rgb(70, 70, 70);
-}
-
-#logo {
-  font-family: 'Bungee', sans-serif;
+nav .nav-items-container #logo {
+  font-family: "Bungee", sans-serif;
   font-size: 1.5em;
 }
-
-#newTweet {
+nav .nav-items-container #newTweet {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: none;
 }
-
-#writeTweet {
+nav .nav-items-container #writeTweet {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: auto;
   color: white;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   background-color: transparent;
   border: none;
 }
-
-.fa-angle-double-down {
+nav .nav-items-container .fa-angle-double-down {
   color: red;
   animation: updown 1s linear infinite;
 }
-
 @keyframes updown {
   0%, 100% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(5px);
   }

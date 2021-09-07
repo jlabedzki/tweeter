@@ -6,6 +6,7 @@
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -17,7 +18,7 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 #desktop-layout {
@@ -36,6 +37,18 @@ body {
     margin: auto;
   }
 
+  nav {
+    background-color: #4056A1;
+    box-shadow: 0 3px 7px -1px #464646;
+  }
+  nav .nav-items-container {
+    max-width: 1600px;
+    margin: auto;
+  }
+  nav .nav-items-container .fa-angle-double-down {
+    color: white;
+  }
+
   #desktop-layout {
     flex-direction: row;
     justify-content: center;
@@ -45,7 +58,7 @@ body {
     padding-top: 120px;
     width: 90%;
   }
-  header.main {
+  #desktop-layout header.main {
     align-self: flex-start;
     height: 400px;
     width: 400px;
@@ -54,19 +67,8 @@ body {
     margin-top: 5vw;
     padding-top: 10px;
   }
-  .container {
+  #desktop-layout .container {
     width: 67%;
     margin-left: 5vw;
-  }
-  nav {
-    background-color: #4056A1;
-    box-shadow: 0 3px 7px -1px rgb(70, 70, 70);
-  }
-  .nav-items-container {
-    max-width: 1600px;
-    margin: auto;
-  }
-  .fa-angle-double-down {
-    color:white;
   }
 }

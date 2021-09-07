@@ -6,16 +6,14 @@ header.main {
   width: 100vw;
   height: 520px;
   padding-top: 120px;
-  background-image: url('/images/crissxcross.png');
-  background-color: rgb(225, 167, 60);
-  box-shadow: 0 3px 7px -1px rgb(70, 70, 70);
+  background-image: url("/images/crissxcross.png");
+  background-color: #e1a73c;
+  box-shadow: 0 3px 7px -1px #464646;
 }
-
-header h2 {
+header.main h2 {
   color: white;
   font-weight: 300;
 }
-
-header strong {
+header.main strong {
   font-weight: 600;
 }
