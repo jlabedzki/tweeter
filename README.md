@@ -10,7 +10,8 @@ This project was created and published by me as part of my learnings at Lighthou
 
 ## Final Product
 
-
+Register page
+!["Register page"](/screenshots/1.png)
 
 
 ## Dependencies
