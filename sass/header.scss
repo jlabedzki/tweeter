@@ -1,0 +1,21 @@
+header.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 520px;
+  padding-top: 120px;
+  background-image: url('/images/crissxcross.png');
+  background-color: rgb(225, 167, 60);
+  box-shadow: 0 3px 7px -1px rgb(70, 70, 70);
+}
+
+header h2 {
+  color: white;
+  font-weight: 300;
+}
+
+header strong {
+  font-weight: 600;
+}

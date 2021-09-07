@@ -1,0 +1,86 @@
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.errorContainer {
+  width: 100%;
+}
+
+.error {
+  text-align: left;
+  width: 100%;
+  color: red;
+  font-weight: 600;
+}
+
+.new-tweet:hover {
+  transform: scale(1.01);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  min-height: 3rem;
+  max-height: 10rem;
+  resize: vertical;
+  border: none;
+  border-bottom: 4px solid rgb(101, 101, 101);
+  padding-bottom: .1em;
+  margin: .5rem;
+  font-weight: bold;
+  color: rgb(100, 100, 100);
+  background-color: transparent;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.button-and-counter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.5em;
+}
+
+.counter,
+button {
+  font-family: 'Bungee', sans-serif;
+}
+
+#submitTweet {
+  border: none;
+  background-color: #4056A1;
+  color: white;
+  padding: .5rem;
+  width: 7rem;
+}
+
+button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.overCount {
+  color: red;
+}
