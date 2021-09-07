@@ -25,7 +25,7 @@ $(document).ready(() => {
   $('#backToTop').click(() => {
     if ($('.new-tweet').is(':hidden')) {
       $('html, body').animate({ scrollTop: 0 });
-      $('.new-tweet').slideDown('slow');
+      $('.new-tweet').slideDown(1000);
       $('#tweet-text').focus();
     } else {
       $('html, body').animate({ scrollTop: 0 });
