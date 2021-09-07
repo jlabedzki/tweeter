@@ -4,9 +4,9 @@ $(document).ready(() => {
 
   //Hide navbar button and show backToTop button after scrolling 400px
   $(document).scroll(function () {
-    const y = $(this).scrollTop();
+    const scrollDepth = $(this).scrollTop();
 
-    if (y > 400) {
+    if (scrollDepth > 400) {
       $('#newTweet').hide();
       $('#backToTop').show();
       $('nav')

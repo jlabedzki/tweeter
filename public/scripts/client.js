@@ -57,8 +57,8 @@ $(document).ready(() => {
     //Remove any error messages on submission
     $(this).children('.errorContainer').empty();
 
-    const data = $(this).serialize();
-    const input = data
+    const submission = $(this).serialize();
+    const input = submission
       .split('=')
       .slice(1)
       .join('')
@@ -68,7 +68,7 @@ $(document).ready(() => {
     e.preventDefault();
 
     if (input && input.length <= 140) {
-      $.post('/tweets', data);
+      $.post('/tweets', submission);
       $('#tweet-text').val('');
       //hide tweet form
       $(this)
