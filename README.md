@@ -30,6 +30,10 @@ Register page
 - Run the development web server using the `npm start` command.
 - Head over to http://localhost:8080/ to get started!
 
+## Known Bugs
+
+- If you have LastPass chrome extension installed, you will get an assertion error in the console when pressing 'enter' in the new tweet textarea.
+
 ## Features
 
 - Single page app (`SPA`) that communicates with the server via AJAX
