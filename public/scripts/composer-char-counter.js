@@ -24,9 +24,11 @@ $(document).ready(() => {
   //Focus on new tweet textarea when clicking backToTop
   $('#backToTop').click(() => {
     if ($('.new-tweet').is(':hidden')) {
+      $('html, body').animate({ scrollTop: 0 });
       $('.new-tweet').slideDown('slow');
       $('#tweet-text').focus();
     } else {
+      $('html, body').animate({ scrollTop: 0 });
       $('#tweet-text').focus();
     }
   })
