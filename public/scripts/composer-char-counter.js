@@ -6,19 +6,37 @@ $(document).ready(() => {
   $(document).scroll(function () {
     const scrollDepth = $(this).scrollTop();
 
-    if (scrollDepth > 400) {
-      $('#newTweet').hide();
-      $('#backToTop').show();
-      $('nav')
-        .removeClass('seeThrough')
-        .addClass('blue');
+    //Adjust how far user has to scroll for backToTop button based on window width
+    if ($(window).width() >= 1024) {
+      if (scrollDepth > 10) {
+        $('#newTweet').hide();
+        $('#backToTop').show();
+        $('nav')
+          .removeClass('seeThrough')
+          .addClass('blue');
+      } else {
+        $('#newTweet').show();
+        $('#backToTop').hide();
+        $('nav')
+          .addClass('seeThrough')
+          .removeClass('blue');
+      }
     } else {
-      $('#newTweet').show();
-      $('#backToTop').hide();
-      $('nav')
-        .addClass('seeThrough')
-        .removeClass('blue');
+      if (scrollDepth > 400) {
+        $('#newTweet').hide();
+        $('#backToTop').show();
+        $('nav')
+          .removeClass('seeThrough')
+          .addClass('blue');
+      } else {
+        $('#newTweet').show();
+        $('#backToTop').hide();
+        $('nav')
+          .addClass('seeThrough')
+          .removeClass('blue');
+      }
     }
+
   })
 
   //Focus on new tweet textarea when clicking backToTop

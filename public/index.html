@@ -4,6 +4,7 @@
 <head>
   <!-- Meta Information -->
   <title>Tweeter</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -18,12 +19,12 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- App CSS -->
-  <link rel="stylesheet" href="styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="styles/navbar.css" type="text/css" />
   <link rel="stylesheet" href="styles/header.css" type="text/css" />
   <link rel="stylesheet" href="styles/new-tweet.css" />
   <link rel="stylesheet" href="styles/tweets.css" />
   <link rel="stylesheet" href="styles/back-to-top.css" />
+  <link rel="stylesheet" href="styles/layout.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -39,44 +40,50 @@
 <body>
   <!-- Top nav bar (fixed) -->
   <nav>
-    <span id="logo">tweeter</span>
-    <div id="newTweet">
-      <button id="writeTweet">
-        <span><strong>Write</strong> a new tweet</span>
-        <i class="fas fa-angle-double-down"></i>
-      </button>
+    <div class="nav-items-container">
+      <span id="logo">tweeter</span>
+      <div id="newTweet">
+        <button id="writeTweet">
+          <span><strong>Write</strong> a new tweet</span>
+          <i class="fas fa-angle-double-down"></i>
+        </button>
+      </div>
     </div>
   </nav>
-  <header class="main">
-    <div>
-      <img id="profilePic" src="/images/profile-hex.png">
-    </div>
-    <div>
-      <h2><strong>Your</strong> Name</h2>
-    </div>
-  </header>
 
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-    <section class="new-tweet">
-      <form method="POST" action="/tweets/">
-        <textarea placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
-        <div class="errorContainer">
-        </div>
-        <div class="button-and-counter">
-          <button type="submit" id="submitTweet">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
-        </div>
-      </form>
-    </section>
+  <div id="desktop-layout">
 
-    <div class="tweet-container"></div>
+    <header class="main">
+      <div>
+        <img id="profilePic" src="/images/profile-hex.png">
+      </div>
+      <div>
+        <h2><strong>Your</strong> Name</h2>
+      </div>
+    </header>
 
-    <button id="backToTop">
-      <i class="fas fa-angle-double-up"></i>
-    </button>
+    <!-- Page-specific (main) content here -->
+    <main class="container">
+      <section class="new-tweet">
+        <form method="POST" action="/tweets/">
+          <textarea placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
+          <div class="errorContainer">
+          </div>
+          <div class="button-and-counter">
+            <button type="submit" id="submitTweet">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
 
-  </main>
+      <div class="tweet-container"></div>
+
+      <button id="backToTop">
+        <i class="fas fa-angle-double-up"></i>
+      </button>
+
+    </main>
+  </div>
 </body>
 
 </html>

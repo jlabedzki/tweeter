@@ -1,7 +1,6 @@
 nav {
   position: fixed;
   top: 0;
-  z-index: 1;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -11,6 +10,14 @@ nav {
   color: #FFFFFF;
   padding-left: 1.5em;
   padding-right: 1.5em;
+}
+
+.nav-items-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: inherit;
 }
 
 .seeThrough {
@@ -46,7 +53,7 @@ nav {
   border: none;
 }
 
-#writeTweet:hover > .fa-angle-double-down {
+.fa-angle-double-down {
   color: red;
   animation: updown 1s linear infinite;
 }
