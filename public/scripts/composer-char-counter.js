@@ -9,9 +9,15 @@ $(document).ready(() => {
     if (y > 400) {
       $('#newTweet').hide();
       $('#backToTop').show();
+      $('nav')
+        .removeClass('seeThrough')
+        .addClass('blue');
     } else {
       $('#newTweet').show();
       $('#backToTop').hide();
+      $('nav')
+        .addClass('seeThrough')
+        .removeClass('blue');
     }
   })
 

@@ -38,8 +38,17 @@ body {
   width: 6vw;
   max-height: 5rem;
   max-width: 5rem;
+  background-color: #4056A1;;
   border-radius: 50%;
+  border: none;
+  color: white;
   box-shadow: 0 4px 7px -1px rgb(70, 70, 70);
+  animation: bobbing 1s linear infinite;
+}
+
+#backToTop:hover {
+  animation: none;
+  transform: scale(1.05);
 }
 
 #backToTop i {
@@ -47,14 +56,9 @@ body {
   font-size: 2rem;
 }
 
-#backToTop:hover > .fa-angle-double-up {
-  animation: bobbing 1s linear infinite;
-}
-
 @keyframes bobbing {
   0%, 100% {
     transform: translateY(0);
-    /* transform: scale(1.5); */
   }
 
   50% {

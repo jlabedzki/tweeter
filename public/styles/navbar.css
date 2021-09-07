@@ -8,10 +8,17 @@ nav {
   justify-content: space-between;
   height: 120px;
   width: 100vw;
-  background-color: #4056A1;
   color: #FFFFFF;
   padding-left: 1.5em;
   padding-right: 1.5em;
+}
+
+.seeThrough {
+  background-color: none;
+}
+
+.blue {
+  background-color: #4056A1;
   box-shadow: 0 4px 7px -1px rgb(70, 70, 70);
 }
 
@@ -25,6 +32,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: none;
 }
 
 #writeTweet {
@@ -32,12 +40,14 @@ nav {
   flex-direction: column;
   align-items: center;
   width: auto;
-  background-color: none;
+  color: white;
   font-family: 'Source Sans Pro', sans-serif;
+  background-color: transparent;
+  border: none;
 }
 
 #writeTweet:hover > .fa-angle-double-down {
-  /* color: red; */
+  color: red;
   animation: updown 1s linear infinite;
 }
 

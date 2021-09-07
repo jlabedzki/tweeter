@@ -40,7 +40,6 @@ const renderTweets = (tweets) => {
 $(document).ready(() => {
   $('.new-tweet').hide();
 
-
   //Toggles visibility of new tweet form when clicking navbar button
   $('#writeTweet').click(() => {
     if ($('.new-tweet').is(':hidden')) {

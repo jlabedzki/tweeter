@@ -64,7 +64,7 @@ button {
   font-family: 'Bungee', sans-serif;
 }
 
-button {
+#submitTweet {
   border: none;
   background-color: #4056A1;
   color: white;
