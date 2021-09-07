@@ -1,5 +1,29 @@
 $(document).ready(() => {
   $('#tweet-text').on('input', charCountAndRecolor);
+  $('#backToTop').hide();
+
+  //Hide navbar button and show backToTop button after scrolling 400px
+  $(document).scroll(function () {
+    const y = $(this).scrollTop();
+
+    if (y > 400) {
+      $('#newTweet').hide();
+      $('#backToTop').show();
+    } else {
+      $('#newTweet').show();
+      $('#backToTop').hide();
+    }
+  })
+
+  //Focus on new tweet textarea when clicking backToTop
+  $('#backToTop').click(() => {
+    if ($('.new-tweet').is(':hidden')) {
+      $('.new-tweet').slideDown('slow');
+      $('#tweet-text').focus();
+    } else {
+      $('#tweet-text').focus();
+    }
+  })
 });
 
 const charCountAndRecolor = function () {
