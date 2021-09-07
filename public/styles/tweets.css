@@ -9,6 +9,7 @@ article.tweet {
   padding-left: 2.5%;
   padding-right: 2.5%;
   margin-top: 20px;
+  margin-bottom: 20px;
   border: 4px solid rgb(100, 100, 100);
 }
 
@@ -55,6 +56,12 @@ article.tweet header i {
   margin-right: 10px;
 }
 
+article.tweet header div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 article.tweet footer i {
   color: #4056A1;
   margin-left: 5px;
@@ -64,4 +71,8 @@ article.tweet footer i {
 article.tweet footer i:hover {
   color: #e2c347;
   cursor: pointer;
+}
+
+article img {
+  margin-right: 10px;
 }
