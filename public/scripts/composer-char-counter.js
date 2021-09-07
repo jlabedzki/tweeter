@@ -53,8 +53,6 @@ $(document).ready(() => {
 });
 
 const charCountAndRecolor = function () {
-  // $(this).parent().children('.errorContainer').empty();
-
   const input = $(this).val().length;
 
   //Retreat up the DOM to <form> and traverse down to find the <output>;
