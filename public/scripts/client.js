@@ -1,4 +1,11 @@
+const escape = str => {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const createTweetElement = function (tweetData) {
+
   const tweet = `
     <article class="tweet">
       <header>
@@ -6,8 +13,9 @@ const createTweetElement = function (tweetData) {
           <img src=${tweetData.user.avatars} />
           <span>${tweetData.user.name}</span>
         </div>
+        <span class="handle">${tweetData.user.handle}</span>
       </header>
-      <p>${tweetData.content.text}</p>
+      <p>${escape(tweetData.content.text)}</p>
       <footer>
       <span>${timeago.format(tweetData.created_at)}</span>
       <div>
@@ -29,6 +37,7 @@ const renderTweets = (tweets) => {
 };
 
 $(document).ready(() => {
+
   $('.new-tweet form').on('submit', function (e) {
     $(this).children('.errorContainer').empty();
 
@@ -44,12 +53,15 @@ $(document).ready(() => {
 
     if (input && input.length <= 140) {
       $.post('/tweets', data);
+      loadTweets();
     }
     if (input.length > 140) {
       $(this).children('.errorContainer').append(`<p class="error">Too many characters!</p>`);
+      $('.error').hide().slideDown('fast');
     }
     if (!input) {
       $(this).children('.errorContainer').append(`<p class="error">Enter some text!</p>`);
+      $('.error').hide().slideDown('fast');
     }
   });
 
