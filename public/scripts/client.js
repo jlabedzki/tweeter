@@ -1,3 +1,4 @@
+//Prevent user tweet code injections
 const escape = str => {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
@@ -37,8 +38,22 @@ const renderTweets = (tweets) => {
 };
 
 $(document).ready(() => {
+  $('.new-tweet').hide();
+
+
+  //Toggles visibility of new tweet form when clicking navbar button
+  $('#writeTweet').click(() => {
+    if ($('.new-tweet').is(':hidden')) {
+      $('.new-tweet').slideDown('slow');
+      $('#tweet-text').focus();
+    } else {
+      $('.new-tweet').slideUp('slow');
+    }
+  })
+
 
   $('.new-tweet form').on('submit', function (e) {
+    //Remove any error messages on submission
     $(this).children('.errorContainer').empty();
 
     const data = $(this).serialize();
@@ -56,12 +71,20 @@ $(document).ready(() => {
       loadTweets();
     }
     if (input.length > 140) {
-      $(this).children('.errorContainer').append(`<p class="error">Too many characters!</p>`);
-      $('.error').hide().slideDown('fast');
+      $(this)
+        .children('.errorContainer')
+        .append(`<p class="error">Too many characters!</p>`);
+      $('.error')
+        .hide()
+        .slideDown('fast');
     }
     if (!input) {
-      $(this).children('.errorContainer').append(`<p class="error">Enter some text!</p>`);
-      $('.error').hide().slideDown('fast');
+      $(this)
+        .children('.errorContainer')
+        .append(`<p class="error">Enter some text!</p>`);
+      $('.error')
+        .hide()
+        .slideDown('fast');
     }
   });
 

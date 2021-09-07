@@ -26,3 +26,27 @@ nav {
   justify-content: center;
   align-items: center;
 }
+
+#writeTweet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  background-color: none;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#writeTweet:hover > .fa-angle-double-down {
+  /* color: red; */
+  animation: updown 1s linear infinite;
+}
+
+@keyframes updown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+}
