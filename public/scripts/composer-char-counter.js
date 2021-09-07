@@ -35,7 +35,7 @@ $(document).ready(() => {
 });
 
 const charCountAndRecolor = function () {
-  $(this).parent().children('.errorContainer').empty();
+  // $(this).parent().children('.errorContainer').empty();
 
   const input = $(this).val().length;
 
@@ -46,12 +46,14 @@ const charCountAndRecolor = function () {
   //Change text color to red if over text limit, remove red if user deletes excess text
   if (parseInt(output.html()) < 0) {
     $(output).addClass('overCount');
+
   } else {
     $(output).removeClass('overCount');
     //remove error message if visible when within count
     $(this)
       .parent()
       .children('.errorContainer')
-      .empty();
+      .children('.error')
+      .slideUp('fast');
   }
 };
