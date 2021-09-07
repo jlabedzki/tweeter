@@ -8,8 +8,7 @@ header.main {
   padding-top: 120px;
   background-image: url('/images/crissxcross.png');
   background-color: rgb(225, 167, 60);
-  /* box-shadow: inset 0 -5px 12px -5px rgb(70, 70, 70); */
-  box-shadow: 0 5px 12px -1px rgb(70, 70, 70);
+  box-shadow: 0 3px 7px -1px rgb(70, 70, 70);
 }
 
 header h2 {
