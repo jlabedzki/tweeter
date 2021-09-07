@@ -46,6 +46,10 @@ const charCountAndRecolor = function () {
     $(output).addClass('overCount');
   } else {
     $(output).removeClass('overCount');
-    $('.errorContainer').empty();
+    //remove error message if visible when within count
+    $(this)
+      .parent()
+      .children('.errorContainer')
+      .empty();
   }
 };

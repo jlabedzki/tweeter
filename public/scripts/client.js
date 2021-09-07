@@ -6,7 +6,6 @@ const escape = str => {
 };
 
 const createTweetElement = function (tweetData) {
-
   const tweet = `
     <article class="tweet">
       <header>
@@ -27,15 +26,18 @@ const createTweetElement = function (tweetData) {
       </footer>
     </article>
     `;
-
   return tweet;
 }
+
+
 
 const renderTweets = (tweets) => {
   for (const tweet of tweets) {
     $('.tweet-container').prepend(createTweetElement(tweet));
   }
 };
+
+
 
 $(document).ready(() => {
   $('.new-tweet').hide();
@@ -50,7 +52,7 @@ $(document).ready(() => {
     }
   })
 
-
+  //use $(this) over direct class/id selecting to not have to traverse the entire DOM every time we select an element
   $('.new-tweet form').on('submit', function (e) {
     //Remove any error messages on submission
     $(this).children('.errorContainer').empty();
@@ -67,13 +69,27 @@ $(document).ready(() => {
 
     if (input && input.length <= 140) {
       $.post('/tweets', data);
+      $('#tweet-text').val('');
+      //hide tweet form
+      $(this)
+        .parent()
+        .slideUp('slow');
+      //reset char counter
+      $(this)
+        .children('.button-and-counter')
+        .children('.counter')
+        .html('140');
       loadTweets();
     }
+
     if (input.length > 140) {
       $(this)
         .children('.errorContainer')
         .append(`<p class="error">Too many characters!</p>`);
-      $('.error')
+      //show error
+      $(this)
+        .children('.errorContainer')
+        .children('.error')
         .hide()
         .slideDown('fast');
     }
@@ -81,7 +97,9 @@ $(document).ready(() => {
       $(this)
         .children('.errorContainer')
         .append(`<p class="error">Enter some text!</p>`);
-      $('.error')
+      $(this)
+        .children('.errorContainer')
+        .children('.error')
         .hide()
         .slideDown('fast');
     }
