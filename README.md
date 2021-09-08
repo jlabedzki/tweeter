@@ -68,20 +68,14 @@ This project was created and published by me as part of my learnings at Lighthou
 
 ## Final Product
 
-Layout shifter responsiveness
 !["Screenshot of responsiveness"](https://github.com/jlabedzki/tweeter/blob/master/docs/responsiveness.gif?raw=true)
 
-Compose tweet
 !["Screenshot of tweet form submission"](https://github.com/jlabedzki/tweeter/blob/master/docs/compose-tweet.gif?raw=true)
 
-Blank tweet error
 !["Screenshot of blank tweet error"](https://github.com/jlabedzki/tweeter/blob/master/docs/blank-tweet-error.gif?raw=true)
 
-Too many characters error
 !["Screenshot of too many characters error"](https://github.com/jlabedzki/tweeter/blob/master/docs/too-many-char-error.gif?raw=true)
 
-Tweets
 !["Screenshot of tweets"](https://github.com/jlabedzki/tweeter/blob/master/docs/tweets.gif?raw=true)
 
-Scroll to top button
 !["Screenshot of scroll to top button"](https://github.com/jlabedzki/tweeter/blob/master/docs/scroll-to-top-button.gif?raw=true)
