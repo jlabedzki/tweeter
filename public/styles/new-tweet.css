@@ -11,13 +11,6 @@ nav {
   padding-left: 1.5em;
   padding-right: 1.5em;
 }
-nav .seeThrough {
-  background-color: none;
-}
-nav .blue {
-  background-color: #4056A1;
-  box-shadow: 0 3px 7px -1px #464646;
-}
 nav .nav-items-container {
   display: flex;
   flex-direction: row;
@@ -57,6 +50,15 @@ nav .nav-items-container .fa-angle-double-down {
   50% {
     transform: translateY(5px);
   }
+}
+
+.seeThrough {
+  background-color: none;
+}
+
+.blue {
+  background-color: #4056A1;
+  box-shadow: 0 3px 7px -1px #464646;
 }
 
 .new-tweet {
