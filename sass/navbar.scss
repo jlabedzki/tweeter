@@ -14,15 +14,7 @@ nav {
   padding-left: 1.5em;
   padding-right: 1.5em;
 
-  .seeThrough {
-    background-color: none;
-  }
   
-  .blue {
-    background-color: $navColor;
-    box-shadow: 0 3px 7px -1px rgb(70, 70, 70);
-  }
-
   .nav-items-container {
     display: flex;
     flex-direction: row;
@@ -71,4 +63,13 @@ nav {
       }
     }
   }
+}
+
+.seeThrough {
+  background-color: none;
+}
+
+.blue {
+  background-color: $navColor;
+  box-shadow: 0 3px 7px -1px rgb(70, 70, 70);
 }
