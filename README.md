@@ -2,19 +2,13 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-The front-end of Tweeter is made with HTML5, CSS3, JavaScript, jQuery, and AJAX.
+The front-end of Tweeter is made with HTML5, CSS3, Sass, JavaScript, jQuery, and AJAX.
 
 ## Purpose
 
 BEWARE: This project was built for learning purposes. It is not intended for use in production-grade software.
 
 This project was created and published by me as part of my learnings at Lighthouse Labs.
-
-## Final Product
-
-Register page
-!["Register page"](/screenshots/1.png)
-
 
 ## Dependencies
 
@@ -71,3 +65,23 @@ Register page
   - On hover: stop animation and increase size slightly
   - On click: Scrolls the user to the top of the page (animated) and autofocuses on the text area of new tweet form
     - if the new tweet form was hidden, then it brings it to view with slide-down animation
+
+## Final Product
+
+Layout shifter responsiveness
+!["Screenshot of responsiveness"](https://github.com/jlabedzki/tweeter/blob/master/docs/responsiveness.gif?raw=true)
+
+Compose tweet
+!["Screenshot of tweet form submission"](https://github.com/jlabedzki/tweeter/blob/master/docs/compose-tweet.gif?raw=true)
+
+Blank tweet error
+!["Screenshot of blank tweet error"](https://github.com/jlabedzki/tweeter/blob/master/docs/blank-tweet-error.gif?raw=true)
+
+Too many characters error
+!["Screenshot of too many characters error"](https://github.com/jlabedzki/tweeter/blob/master/docs/too-many-char-error.gif?raw=true)
+
+Tweets
+!["Screenshot of tweets"](https://github.com/jlabedzki/tweeter/blob/master/docs/tweets.gif?raw=true)
+
+Scroll to top button
+!["Screenshot of scroll to top button"](https://github.com/jlabedzki/tweeter/blob/master/docs/scroll-to-top-button.gif?raw=true)
