@@ -32,6 +32,8 @@ This project was created and published by me as part of my learnings at Lighthou
 
 - Single page app (`SPA`) that communicates with the server via AJAX
 
+- Responsive layout
+
 - `Navbar`:
    - fixed to top
    - has functional button (aligned right) that, when clicked, will show the new tweet form (if it was hidden) with a slide-down animation and autofocus the text area, or hide the new tweet form (if it was visible) with a slide-up animation
