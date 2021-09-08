@@ -73,6 +73,7 @@
     $(this).children('.errorContainer').empty();
 
     const $submission = $(this).serialize();
+    //Remove 'text=' from beginning of $submission
     const $input = $submission
       .split('=')
       .slice(1)
