@@ -15,15 +15,9 @@
       if (scrollDepth > 10) {
         $('#newTweet').hide();
         $('#backToTop').show();
-        $('nav')
-          .removeClass('seeThrough')
-          .addClass('blue');
       } else {
         $('#newTweet').show();
         $('#backToTop').hide();
-        $('nav')
-          .addClass('seeThrough')
-          .removeClass('blue');
       }
     } else {
       if (scrollDepth > 400) {
