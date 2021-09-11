@@ -73,16 +73,9 @@
     $(this).children('.errorContainer').empty();
 
     const $submission = $(this).serialize();
-    console.log(e.target.value);
-    //Remove 'text=' from beginning of $submission
-    const $input = $submission
-      .split('=')
-      .slice(1)
-      .join('')
-      .split('%20')
-      .join(' ');
+    const $inputLength = $(this).children('#tweet-text').val().length;
 
-    if (!$input) {
+    if (!$inputLength) {
       $(this)
         .children('.errorContainer')
         .append(`<p class="error">Enter some text!</p>`);
@@ -93,7 +86,7 @@
         .slideDown('fast');
     }
 
-    if ($input.length > 140) {
+    if ($inputLength > 140) {
       $(this)
         .children('.errorContainer')
         .append(`<p class="error">Too many characters!</p>`);
@@ -105,7 +98,7 @@
         .slideDown('fast');
     }
 
-    if ($input && $input.length < 141) {
+    if ($inputLength && $inputLength <= 140) {
       $.post('/tweets', $submission)
         .then(() => {
           loadTweets();
