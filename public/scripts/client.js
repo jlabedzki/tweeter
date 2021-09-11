@@ -73,6 +73,7 @@
     $(this).children('.errorContainer').empty();
 
     const $submission = $(this).serialize();
+    console.log(e.target.value);
     //Remove 'text=' from beginning of $submission
     const $input = $submission
       .split('=')
@@ -104,8 +105,11 @@
         .slideDown('fast');
     }
 
-    if ($input && $input.length <= 140) {
-      $.post('/tweets', $submission);
+    if ($input && $input.length < 141) {
+      $.post('/tweets', $submission)
+        .then(() => {
+          loadTweets();
+        })
       $('#tweet-text').val('');
       //hide tweet form
       $(this)
@@ -116,8 +120,6 @@
         .children('.button-and-counter')
         .children('.counter')
         .text('140');
-      //load most recent tweet
-      loadTweets();
     }
   };
 })(jQuery);
