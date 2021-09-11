@@ -31,6 +31,11 @@ body {
   width: 90%;
 }
 
+@media screen and (max-width: 1023px) {
+  .tweet-container {
+    width: 90vw;
+  }
+}
 @media screen and (min-width: 1024px) {
   body {
     max-width: 1600px;
