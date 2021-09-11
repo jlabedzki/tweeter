@@ -64,9 +64,9 @@
     }
   }
 
-  const formSubmission = function (e) {
-    //use $(this) over direct class/id selecting to not have to traverse the entire DOM every time we select an element
 
+
+  const formSubmission = function (e) {
     e.preventDefault();
 
     //Remove any error messages on submission
@@ -75,28 +75,8 @@
     const $submission = $(this).serialize();
     const $inputLength = $(this).children('#tweet-text').val().length;
 
-    if (!$inputLength) {
-      $(this)
-        .children('.errorContainer')
-        .append(`<p class="error">Enter some text!</p>`);
-      $(this)
-        .children('.errorContainer')
-        .children('.error')
-        .hide()
-        .slideDown('fast');
-    }
-
-    if ($inputLength > 140) {
-      $(this)
-        .children('.errorContainer')
-        .append(`<p class="error">Too many characters!</p>`);
-      //show error
-      $(this)
-        .children('.errorContainer')
-        .children('.error')
-        .hide()
-        .slideDown('fast');
-    }
+    if (!$inputLength) displayError(1);
+    if ($inputLength > 140) displayError(2);
 
     if ($inputLength && $inputLength <= 140) {
       $.post('/tweets', $submission)
@@ -115,4 +95,20 @@
         .text('140');
     }
   };
+
+  const displayError = err => {
+    if (err === 1) {
+      $('.errorContainer').append(`<p class="error">Enter some text!</p>`);
+      $('.error')
+        .hide()
+        .slideDown('fast');
+    }
+    if (err === 2) {
+      $('.errorContainer').append(`<p class="error">Too many characters!</p>`);
+      $('.error')
+        .hide()
+        .slideDown('fast');
+    }
+  }
+
 })(jQuery);
